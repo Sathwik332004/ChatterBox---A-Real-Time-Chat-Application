@@ -1,3 +1,4 @@
+/*
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,3 +67,34 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark mode looling */
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-track{
+  background: #555;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #121212;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background: #242424;
+}
+
+
