@@ -1,21 +1,22 @@
-import Mongoose  from "mongoose";
+import Mongoose from "mongoose";
 
-const conversationSchema = new Mongoose.Schema({
+const conversationSchema = new Mongoose.Schema(
+  {
     participants: [
-        {
-            type: Mongoose.Schema.Types.ObjectId,
-            ref: "User",
-        },
+      {
+        type: Mongoose.Schema.Types.ObjectId,
+        ref: "User",
+      },
     ],
     messages: [
-        {
-            type: Mongoose.Schema.Types.ObjectId,
-            ref: "Message",
-            default:[],
-        },
+      {
+        type: Mongoose.Schema.Types.ObjectId,
+        ref: "Message",
+        default: [],
+      },
     ],
-},
-    {timestamps:true}
+  },
+  { timestamps: true }
 );
 
 export default Mongoose.model("Conversation", conversationSchema);
